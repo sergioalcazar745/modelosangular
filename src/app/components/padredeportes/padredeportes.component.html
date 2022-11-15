@@ -1,0 +1,11 @@
+<div>
+    <h1>Padre Deportes</h1>
+    <div *ngIf="favorito" style="">
+        <h1 style="background-color: green; color: white;">Deporte devaorito: {{favorito}}</h1>
+    </div>
+    <div *ngFor="let deporte of deportes">
+        <!-- <app-hijodeporte (favorito)="favorito($event)"></app-hijodeporte> -->
+        <app-hijodeporte [sport]="deporte" (favorito)="deporteFavorito($event)"></app-hijodeporte>
+        <hr/>
+    </div>
+</div>
